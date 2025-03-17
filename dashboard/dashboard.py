@@ -52,7 +52,6 @@ else:
         df_selected = filtered_df[available_features]
         correlation_matrix = df_selected.corr()
 
-        # Korelasi terhadap cnt_day
         corr_target = correlation_matrix["cnt_day"].drop("cnt_day").abs().sort_values(ascending=False)
 
         plt.figure(figsize=(10, 6))
